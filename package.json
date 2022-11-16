@@ -4,7 +4,8 @@
 	"description": "expense tracking webapp",
 	"main": "index.js",
 	"scripts": {
-		"compile:sass": "node-sass ./src/sass/main.scss ./src/css/style.css -w"
+		"start": "parcel index.html",
+		"build": "parcel build index.html"
 	},
 	"repository": {
 		"type": "git",
