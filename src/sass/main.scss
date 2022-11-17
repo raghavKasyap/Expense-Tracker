@@ -78,7 +78,8 @@ body {
 }
 
 .btn:hover {
-	background-color: #1864ab;
+	background-color: #ffd43b;
+	color: #090909;
 }
 
 .webapp-wrapper {
@@ -114,14 +115,8 @@ body {
 	display: grid;
 	grid-template-columns: 16vw 16vw 1fr;
 	grid-template-rows: 68vh 0.9fr;
-	gap: 40px;
-}
-
-.tag-container {
-	background-color: #111111;
-	width: 100%;
-	height: 80%;
-	border-radius: 15px;
+	column-gap: 40px;
+	row-gap: 30px;
 }
 
 .summary-container {
@@ -172,10 +167,12 @@ body {
 	cursor: pointer;
 	transition: all 0.2s;
 	color: #e5e7eb;
+	height: 50px;
 }
 
 .nav-icon:hover {
-	background-color: #1864ab;
+	background-color: #ffd43b;
+	color: #090909;
 }
 
 .navigation-container {
@@ -189,11 +186,23 @@ body {
 	margin-bottom: 10px;
 }
 
-.tag-container {
+.tag-section {
+	background-color: #111111;
+	width: 100%;
+	height: 80%;
+	border-radius: 15px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 30px;
+	gap: 10px;
+}
+
+.tag-container {
+	margin-top: 20px;
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
 
 .search-tag {
@@ -201,7 +210,7 @@ body {
 	width: 90%;
 	background-color: #111111;
 	border: none;
-	padding: 20px 10px 10px;
+	padding: 20px 0px 10px;
 	border-bottom: 1px solid #e5e7eb;
 	color: #e5e7eb;
 	font-family: 'Montserrat', sans-serif;
@@ -229,11 +238,11 @@ body {
 }
 
 .btn--primary {
-	background-color: #1971c2;
+	background-color: #ffd43b;
 	border: none;
 	outline: none;
 	cursor: pointer;
-	color: #e5e7eb;
+	color: #090909;
 	border-radius: 5px;
 	padding: 10px 25px;
 }
@@ -244,6 +253,10 @@ body {
 	display: flex;
 	justify-content: start;
 	gap: 20px;
+}
+
+.select-all {
+	align-self: end;
 }
 
 .tag__name {
@@ -270,4 +283,26 @@ body {
 
 #tag--4 .tag__color {
 	background-color: #ffe066;
+}
+
+.calendar__cell--date {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 10px;
+}
+
+.date {
+}
+
+.date__expenditure {
+	font-size: 13px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #ffd43b;
+}
+
+.tag__checkbox {
+	background-color: #ffd43b;
 }
