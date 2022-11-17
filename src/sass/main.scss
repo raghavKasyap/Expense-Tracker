@@ -5,40 +5,39 @@
 }
 
 body {
-	font-family: 'Lato', sans-serif;
-	color: #e9ecef;
-	background-color: black;
+	font-family: 'Montserrat', sans-serif;
+	color: #e5e7eb;
+	background-color: #090909;
+	font-size: 15px;
 }
 
 .calendar__cell--day {
-	/* background-color: teal; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-weight: bold;
 }
 
 .calendar__cell--date {
-	/* background-color: orange; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.container {
-	height: 100vh;
-	width: 28vw;
+.calendar-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap: 30px;
+	gap: 20px;
 	align-items: stretch;
 	background-color: #111111;
+	padding: 20px 0;
+	border-radius: 15px;
+	grid-column: 1 / 3;
 }
 
 .calendar {
+	height: 55vh;
 	display: grid;
-	height: 50vh;
 	grid-template-columns: repeat(7, 1fr);
 	column-gap: 10px;
 	row-gap: 10px;
@@ -51,14 +50,16 @@ body {
 	justify-content: space-between;
 	font-size: 25px;
 	align-self: center;
+	border-bottom: 1px solid #f9fafb;
+	padding-bottom: 20px;
 }
 
 .label__description {
 	width: 50%;
 	justify-content: center;
+	align-items: center;
 	gap: 30px;
 	display: flex;
-	letter-spacing: 2px;
 }
 
 .btn {
@@ -69,13 +70,204 @@ body {
 	display: flex;
 	align-items: center;
 	border-radius: 50%;
-	width: 30px;
-	height: 30px;
+	width: 40px;
+	height: 40px;
 	justify-content: center;
 	color: white;
 	transition: all 0.2s;
 }
 
 .btn:hover {
-	background-color: #1c7ed6;
+	background-color: #1864ab;
+}
+
+.webapp-wrapper {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 80px 55% 1fr;
+	grid-template-rows: 80px 1fr;
+	row-gap: 20px;
+	column-gap: 50px;
+}
+
+.topbar {
+	grid-column: 2 / -1;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-right: 30px;
+}
+
+.topbar__heading {
+	font-weight: bold;
+	font-size: 30px;
+	letter-spacing: 2px;
+}
+
+.header__logo {
+	width: 80px;
+	height: 80px;
+	margin-bottom: 20px;
+}
+
+.action-section {
+	display: grid;
+	grid-template-columns: 16vw 16vw 1fr;
+	grid-template-rows: 68vh 0.9fr;
+	gap: 40px;
+}
+
+.tag-container {
+	background-color: #111111;
+	width: 100%;
+	height: 80%;
+	border-radius: 15px;
+}
+
+.summary-container {
+	background-color: #111111;
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+}
+
+.information-section {
+	background-color: #111111;
+	width: 96%;
+	height: 98%;
+	border-radius: 15px;
+}
+
+.topbar__profile {
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	gap: 20px;
+	font-size: 20px;
+	font-weight: 400;
+	letter-spacing: 1;
+}
+
+.profile-picture {
+	width: 60px;
+	height: 60px;
+	display: inline-block;
+	border-radius: 10px;
+}
+
+.navbar {
+	padding-top: 3px;
+	grid-row: 1 / -1;
+	background-color: #111111;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-icon {
+	padding: 10px 10px;
+	font-size: 30px;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.2s;
+	color: #e5e7eb;
+}
+
+.nav-icon:hover {
+	background-color: #1864ab;
+}
+
+.navigation-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+}
+
+.sign-out {
+	margin-bottom: 10px;
+}
+
+.tag-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 30px;
+}
+
+.search-tag {
+	font-size: 14px;
+	width: 90%;
+	background-color: #111111;
+	border: none;
+	padding: 20px 10px 10px;
+	border-bottom: 1px solid #e5e7eb;
+	color: #e5e7eb;
+	font-family: 'Montserrat', sans-serif;
+	transition: all 0.2s;
+}
+
+.search-tag::placeholder {
+	color: #71717a;
+}
+
+.search-tag:placeholder-shown {
+	border-bottom: 1px solid #71717a;
+}
+
+.search-tag:focus {
+	outline: none;
+}
+
+.tag__header {
+	display: flex;
+	align-self: stretch;
+	justify-content: space-between;
+	padding: 20px;
+	align-items: center;
+}
+
+.btn--primary {
+	background-color: #1971c2;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: #e5e7eb;
+	border-radius: 5px;
+	padding: 10px 25px;
+}
+
+.tag {
+	align-self: stretch;
+	padding: 0 20px;
+	display: flex;
+	justify-content: start;
+	gap: 20px;
+}
+
+.tag__name {
+	flex-grow: 1;
+}
+
+.tag__color {
+	width: 15px;
+	height: 15px;
+	border-radius: 50px;
+}
+
+#tag--1 .tag__color {
+	background-color: #82c91e;
+}
+
+#tag--2 .tag__color {
+	background-color: #f03e3e;
+}
+
+#tag--3 .tag__color {
+	background-color: #6741d9;
+}
+
+#tag--4 .tag__color {
+	background-color: #ffe066;
 }

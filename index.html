@@ -4,72 +4,155 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="./src/sass/main.scss" />
+
 		<script src="https://unpkg.com/phosphor-icons"></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="./src/sass/main.scss" />
 		<title>Expense Tracker</title>
 	</head>
 	<body>
-		<div class="container">
-			<div class="label">
-				<button class="btn">
-					<i class="ph-caret-left"></i>
-				</button>
-
-				<div class="label__description">
-					<div class="label__month">December</div>
-					<div class="label__year">2022</div>
+		<!--  -->
+		<div class="webapp-wrapper">
+			<nav class="navbar">
+				<div class="navigation-container">
+					<img src="src/imgs/logo.png" alt="Logo" class="header__logo" />
+					<div class="nav-icon"><i class="ph-cardholder"></i></div>
+					<div class="nav-icon"><i class="ph-gear"></i></div>
 				</div>
-				<button class="btn">
-					<i class="ph-caret-right"></i>
-				</button>
+				<div class="sign-out nav-icon"><i class="ph-sign-out"></i></div>
+			</nav>
+			<div class="topbar">
+				<div class="topbar__heading">Main Dashboard</div>
+				<div class="topbar__profile">
+					<div class="profile-name">Raghav Kasyap</div>
+					<div class="profile-picture-container">
+						<img src="src/imgs/profile_pic.jpg" alt="Logo" class="profile-picture" />
+					</div>
+				</div>
 			</div>
-			<div class="calendar">
-				<div class="calendar__cell--day">M</div>
-				<div class="calendar__cell--day">T</div>
-				<div class="calendar__cell--day">W</div>
-				<div class="calendar__cell--day">T</div>
-				<div class="calendar__cell--day">F</div>
-				<div class="calendar__cell--day">S</div>
-				<div class="calendar__cell--day">S</div>
-				<div class="calendar__cell"></div>
-				<div class="calendar__cell"></div>
-				<div class="calendar__cell--date">1</div>
-				<div class="calendar__cell--date">2</div>
-				<div class="calendar__cell--date">3</div>
-				<div class="calendar__cell--date">4</div>
-				<div class="calendar__cell--date">5</div>
-				<div class="calendar__cell--date">6</div>
-				<div class="calendar__cell--date">7</div>
-				<div class="calendar__cell--date">8</div>
-				<div class="calendar__cell--date">9</div>
-				<div class="calendar__cell--date">10</div>
-				<div class="calendar__cell--date">11</div>
-				<div class="calendar__cell--date">12</div>
-				<div class="calendar__cell--date">13</div>
-				<div class="calendar__cell--date">14</div>
-				<div class="calendar__cell--date">15</div>
-				<div class="calendar__cell--date">16</div>
-				<div class="calendar__cell--date">17</div>
-				<div class="calendar__cell--date">18</div>
-				<div class="calendar__cell--date">19</div>
-				<div class="calendar__cell--date">20</div>
-				<div class="calendar__cell--date">21</div>
-				<div class="calendar__cell--date">22</div>
-				<div class="calendar__cell--date">23</div>
-				<div class="calendar__cell--date">24</div>
-				<div class="calendar__cell--date">25</div>
-				<div class="calendar__cell--date">26</div>
-				<div class="calendar__cell--date">27</div>
-				<div class="calendar__cell--date">28</div>
-				<div class="calendar__cell--date">29</div>
-				<div class="calendar__cell--date">30</div>
-				<div class="calendar__cell--date">31</div>
-				<div class="calendar__cell"></div>
-				<div class="calendar__cell"></div>
-			</div>
+			<section class="action-section">
+				<div class="calendar-container">
+					<div class="label">
+						<button class="btn">
+							<i class="ph-caret-left"></i>
+						</button>
+
+						<div class="label__description">
+							<div class="label__month">December</div>
+							<div class="label__year">2022</div>
+						</div>
+						<button class="btn">
+							<i class="ph-caret-right"></i>
+						</button>
+					</div>
+					<div class="calendar">
+						<div class="calendar__cell--day">M</div>
+						<div class="calendar__cell--day">T</div>
+						<div class="calendar__cell--day">W</div>
+						<div class="calendar__cell--day">T</div>
+						<div class="calendar__cell--day">F</div>
+						<div class="calendar__cell--day">S</div>
+						<div class="calendar__cell--day">S</div>
+						<div class="calendar__cell"></div>
+						<div class="calendar__cell"></div>
+						<div class="calendar__cell--date">1</div>
+						<div class="calendar__cell--date">2</div>
+						<div class="calendar__cell--date">3</div>
+						<div class="calendar__cell--date">4</div>
+						<div class="calendar__cell--date">5</div>
+						<div class="calendar__cell--date">6</div>
+						<div class="calendar__cell--date">7</div>
+						<div class="calendar__cell--date">8</div>
+						<div class="calendar__cell--date">9</div>
+						<div class="calendar__cell--date">10</div>
+						<div class="calendar__cell--date">11</div>
+						<div class="calendar__cell--date">12</div>
+						<div class="calendar__cell--date">13</div>
+						<div class="calendar__cell--date">14</div>
+						<div class="calendar__cell--date">15</div>
+						<div class="calendar__cell--date">16</div>
+						<div class="calendar__cell--date">17</div>
+						<div class="calendar__cell--date">18</div>
+						<div class="calendar__cell--date">19</div>
+						<div class="calendar__cell--date">20</div>
+						<div class="calendar__cell--date">21</div>
+						<div class="calendar__cell--date">22</div>
+						<div class="calendar__cell--date">23</div>
+						<div class="calendar__cell--date">24</div>
+						<div class="calendar__cell--date">25</div>
+						<div class="calendar__cell--date">26</div>
+						<div class="calendar__cell--date">27</div>
+						<div class="calendar__cell--date">28</div>
+						<div class="calendar__cell--date">29</div>
+						<div class="calendar__cell--date">30</div>
+						<div class="calendar__cell--date">31</div>
+						<div class="calendar__cell"></div>
+						<div class="calendar__cell"></div>
+					</div>
+				</div>
+
+				<div class="tag-container">
+					<input
+						type="text"
+						class="search-tag"
+						placeholder="&#xF002;  Search.."
+						style="font-family: Arial, FontAwesome"
+					/>
+
+					<div class="tag__header">
+						Your Tags
+
+						<button class="btn--primary">Add Tag</button>
+					</div>
+
+					<div class="tag">
+						<input type="checkbox" name="select all" id="0" />
+						<div class="tag__name">Select All</div>
+					</div>
+
+					<div class="tag" id="tag--1">
+						<input type="checkbox" name="select all" id="0" />
+						<div class="tag__name">Food</div>
+
+						<div class="tag__color"></div>
+					</div>
+
+					<div class="tag" id="tag--2">
+						<input type="checkbox" name="select all" id="0" />
+						<div class="tag__name">Clothing</div>
+
+						<div class="tag__color"></div>
+					</div>
+
+					<div class="tag" id="tag--3">
+						<input type="checkbox" name="select all" id="0" />
+						<div class="tag__name">Travel</div>
+
+						<div class="tag__color"></div>
+					</div>
+
+					<div class="tag" id="tag--4">
+						<input type="checkbox" name="select all" id="0" />
+						<div class="tag__name">Subscription</div>
+
+						<div class="tag__color"></div>
+					</div>
+				</div>
+
+				<div class="summary-container"></div>
+				<div class="summary-container"></div>
+			</section>
+			<aside class="information-section"></aside>
 		</div>
 	</body>
 </html>
