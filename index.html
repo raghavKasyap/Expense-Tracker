@@ -9,7 +9,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
 			rel="stylesheet"
 		/>
 		<link
@@ -24,176 +24,180 @@
 		<!--  -->
 		<div class="webapp-wrapper">
 			<nav class="navbar">
-				<div class="navigation-container">
-					<img src="src/imgs/logo.png" alt="Logo" class="header__logo" />
-					<div class="nav-icon"><i class="ph-cardholder"></i></div>
-					<div class="nav-icon"><i class="ph-gear"></i></div>
+				<img src="src/imgs/logo.png" alt="Logo" class="navbar__logo" />
+				<div class="navbar__nav-btn btn btn--square"><i class="ph-cardholder"></i></div>
+				<div class="navbar__nav-btn btn btn--square"><i class="ph-gear"></i></div>
+				<div class="navbar__nav-btn btn btn--square sign-out">
+					<i class="ph-sign-out"></i>
 				</div>
-				<div class="sign-out nav-icon"><i class="ph-sign-out"></i></div>
 			</nav>
+
 			<div class="topbar">
-				<div class="topbar__heading">Main Dashboard</div>
-				<div class="topbar__profile">
-					<div class="profile-name">Raghav Kasyap</div>
-					<div class="profile-picture-container">
-						<img src="src/imgs/profile_pic.jpg" alt="Logo" class="profile-picture" />
-					</div>
+				<div class="heading--primary">Main Dashboard</div>
+				<div class="profile profile--topbar">
+					<div class="profile__name">Raghav Kasyap</div>
+					<img src="src/imgs/profile_pic.jpg" alt="Logo" class="profile__picture" />
 				</div>
 			</div>
-			<section class="action-section">
-				<div class="calendar-container">
-					<div class="label">
-						<button class="btn">
-							<i class="ph-caret-left"></i>
-						</button>
 
-						<div class="label__description">
-							<div class="label__month">December</div>
-							<div class="label__year">2022</div>
+			<main class="main">
+				<div class="section section--calendar">
+					<div class="calendar-label">
+						<div class="btn btn--circular">
+							<i class="ph-caret-left"></i>
 						</div>
-						<button class="btn">
+
+						<div class="heading--label">
+							<span class="label__month">December</span>
+							<span class="label__year">2022</span>
+						</div>
+						<div class="btn btn--circular">
 							<i class="ph-caret-right"></i>
-						</button>
+						</div>
 					</div>
+
 					<div class="calendar">
-						<div class="calendar__cell--day">M</div>
-						<div class="calendar__cell--day">T</div>
-						<div class="calendar__cell--day">W</div>
-						<div class="calendar__cell--day">T</div>
-						<div class="calendar__cell--day">F</div>
-						<div class="calendar__cell--day">S</div>
-						<div class="calendar__cell--day">S</div>
+						<div class="calendar__cell calendar__cell--day">M</div>
+						<div class="calendar__cell calendar__cell--day">T</div>
+						<div class="calendar__cell calendar__cell--day">W</div>
+						<div class="calendar__cell calendar__cell--day">T</div>
+						<div class="calendar__cell calendar__cell--day">F</div>
+						<div class="calendar__cell calendar__cell--day">S</div>
+						<div class="calendar__cell calendar__cell--day">S</div>
+
 						<div class="calendar__cell"></div>
 						<div class="calendar__cell"></div>
-						<div class="calendar__cell--date">
+
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">1</div>
 							<div class="date__expenditure">
 								<i class="ph-currency-inr"></i> 1200
 							</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">2</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 100</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">3</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 200</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">4</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 450</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">5</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 780</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">6</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 420</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">7</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 220</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">8</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 240</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">9</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 0</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">10</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 10</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">11</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 245</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">12</div>
 							<div class="date__expenditure">
 								<i class="ph-currency-inr"></i> 1223
 							</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">13</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 170</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">14</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 51</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">15</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 43</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">16</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 67</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">17</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 186</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">18</div>
 							<div class="date__expenditure">
-								<i class="ph-currency-inr"></i> 1000
+								<i class="ph-currency-inr"></i>
+								<span class="expenditure">1000</span>
 							</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">19</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 250</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">20</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 100</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">21</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 80</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">22</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 890</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">23</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 154</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">24</div>
 							<div class="date__expenditure">
 								<i class="ph-currency-inr"></i> 4000
 							</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">25</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 750</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">26</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 105</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">27</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 140</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">28</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 120</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">29</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 40</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">30</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 50</div>
 						</div>
-						<div class="calendar__cell--date">
+						<div class="calendar__cell calendar__cell--date">
 							<div class="date">31</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 900</div>
 						</div>
@@ -203,7 +207,7 @@
 					</div>
 				</div>
 
-				<div class="tag-section">
+				<div class="section section--tag">
 					<input
 						type="text"
 						class="search-tag"
@@ -211,10 +215,9 @@
 						style="font-family: Arial, FontAwesome"
 					/>
 
-					<div class="tag__header">
-						Your Tags
-
-						<button class="btn--primary">Add Tag</button>
+					<div class="section__header section__header--scroll">
+						<div class="heading--tertiary--main">Your Tags</div>
+						<div class="btn btn--primary">Add Tag</div>
 					</div>
 
 					<div class="tag select-all">
@@ -250,13 +253,89 @@
 
 							<div class="tag__color"></div>
 						</div>
+						<div class="tag" id="tag--4">
+							<input type="checkbox" name="select all" id="0" />
+							<div class="tag__name">Subscription</div>
+
+							<div class="tag__color"></div>
+						</div>
+						<div class="tag" id="tag--4">
+							<input type="checkbox" name="select all" id="0" />
+							<div class="tag__name">Subscription</div>
+
+							<div class="tag__color"></div>
+						</div>
+						<div class="tag" id="tag--4">
+							<input type="checkbox" name="select all" id="0" />
+							<div class="tag__name">Subscription</div>
+
+							<div class="tag__color"></div>
+						</div>
+						<div class="tag" id="tag--4">
+							<input type="checkbox" name="select all" id="0" />
+							<div class="tag__name">Subscription</div>
+
+							<div class="tag__color"></div>
+						</div>
+						<div class="tag" id="tag--4">
+							<input type="checkbox" name="select all" id="0" />
+							<div class="tag__name">Subscription</div>
+
+							<div class="tag__color"></div>
+						</div>
+						<div class="tag" id="tag--4">
+							<input type="checkbox" name="select all" id="0" />
+							<div class="tag__name">Subscription</div>
+
+							<div class="tag__color"></div>
+						</div>
+						<div class="tag" id="tag--4">
+							<input type="checkbox" name="select all" id="0" />
+							<div class="tag__name">Subscription</div>
+
+							<div class="tag__color"></div>
+						</div>
 					</div>
 				</div>
 
-				<div class="summary-container"></div>
-				<div class="summary-container"></div>
-			</section>
-			<aside class="information-section"></aside>
+				<div class="section section--summary">
+					<div class="section__header">
+						<div class="heading--secondary--bold">Total Expenditure</div>
+						<i class="ph-receipt summary__icon"></i>
+					</div>
+
+					<div class="summary">
+						This Month
+						<div class="currency-wrapper">
+							<i class="ph-currency-inr"></i>
+							<span class="montly-total">1000</span>
+						</div>
+					</div>
+
+					<div class="summary">
+						Overall
+						<div class="currency-wrapper">
+							<i class="ph-currency-inr"></i>
+							<span class="overall-total">100000</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="section section--quote"></div>
+			</main>
+
+			<aside class="section section--expenses">
+				<div class="section__header section__header--scroll">
+					<div class="heading--twoline">
+						<div class="heading--tertiary--main">Your Expenditures</div>
+						<div class="heading--tertiary--sub">
+							on <span class="date--selected"></span>12/12/2022
+						</div>
+					</div>
+
+					<div class="btn btn--primary">Add Expense</div>
+				</div>
+			</aside>
 		</div>
 	</body>
 </html>
