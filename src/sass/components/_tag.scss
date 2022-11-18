@@ -1,0 +1,48 @@
+.tag-container {
+	padding-right: 2rem;
+	align-self: stretch;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	overflow-y: scroll;
+}
+
+.tag {
+	align-self: stretch;
+	display: flex;
+	justify-content: start;
+	gap: 2rem;
+	flex-shrink: 0;
+	font-size: 1.5rem;
+
+	&__name {
+		flex-grow: 1;
+	}
+
+	&__color {
+		width: 1.5rem;
+		height: 1.5rem;
+		border-radius: 5rem;
+	}
+
+	&__checkbox {
+		// TODO
+		background-color: $color-primary;
+	}
+}
+
+#tag--1 .tag__color {
+	background-color: #82c91e;
+}
+
+#tag--2 .tag__color {
+	background-color: #f03e3e;
+}
+
+#tag--3 .tag__color {
+	background-color: #6741d9;
+}
+
+#tag--4 .tag__color {
+	background-color: #ffe066;
+}

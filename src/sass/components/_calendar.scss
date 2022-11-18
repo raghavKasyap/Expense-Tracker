@@ -1,0 +1,38 @@
+.calendar {
+	&__label {
+		width: 93%;
+		display: flex;
+		justify-content: space-between;
+		align-self: center;
+		border-bottom: 0.1rem solid $color-white;
+		padding-bottom: 1rem;
+	}
+
+	&__matrix {
+		flex: 1;
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		column-gap: 1rem;
+		row-gap: 1rem;
+		font-size: 1.8rem;
+
+		&__cell {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&--date {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				gap: 1rem;
+				cursor: pointer;
+				transition: all 0.3s;
+			}
+
+			&--date:hover {
+				background-color: $color-black-light;
+			}
+		}
+	}
+}

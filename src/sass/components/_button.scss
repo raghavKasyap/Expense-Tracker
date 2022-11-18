@@ -1,0 +1,42 @@
+.btn {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: inherit;
+	transition: all 0.2s;
+
+	&:hover {
+		background-color: $color-primary;
+		color: $color-black-dark;
+	}
+
+	&--circular {
+		border-radius: 50%;
+		font-size: 2.5rem;
+		padding: 1rem 1rem;
+	}
+
+	&--square {
+		border-radius: 1rem;
+		padding: 1rem 1rem;
+		font-size: 3rem;
+	}
+
+	&--primary {
+		background-color: $color-primary;
+		color: $color-black-dark;
+		border-radius: 1rem;
+		padding: 1rem 2.5rem;
+		align-self: stretch;
+		font-size: 1.4rem;
+
+		&:hover {
+			transform: translateY(-0.3rem);
+		}
+
+		&:active {
+			transform: translatey(-0rem);
+		}
+	}
+}

@@ -1,0 +1,19 @@
+// main app
+.webapp-wrapper {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 8rem 55% 1fr;
+	grid-template-rows: 8rem 1fr;
+	row-gap: 2rem;
+	column-gap: 5rem;
+}
+
+// scroll bar
+::-webkit-scrollbar {
+	width: 0.6rem;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #333;
+	border-radius: 1.5rem;
+}

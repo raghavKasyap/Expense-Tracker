@@ -1,0 +1,51 @@
+.section {
+	background-color: $color-black-medium;
+	display: flex;
+	flex-direction: column;
+	border-radius: 1.5rem;
+	gap: 2rem;
+	padding: 2rem;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&--scroll {
+			margin-right: 2rem;
+		}
+	}
+
+	&--calendar {
+		grid-column: 1 / 3;
+		padding: 2rem 0rem;
+	}
+
+	&--expenses {
+		width: 96%;
+		height: 98%;
+		padding-right: 0rem;
+	}
+
+	&--tag {
+		height: 80%;
+		padding-right: 0rem;
+	}
+
+	&--summary {
+		background-color: $color-primary;
+		background-image: linear-gradient(
+			63deg,
+			$color-primary-dark 0%,
+			$color-primary 40%,
+			$color-primary-dark 90%
+		);
+		color: $color-black-dark;
+		gap: 0px;
+		justify-content: space-between;
+	}
+
+	&--quote {
+		grid-column: 2 / -1;
+	}
+}
