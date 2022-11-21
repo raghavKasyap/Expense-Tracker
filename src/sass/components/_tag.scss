@@ -45,3 +45,12 @@
 #tag--4 .tag__color {
 	background-color: #ffe066;
 }
+
+.select-all {
+	justify-content: end;
+}
+
+.select-all .tag__name {
+	flex-grow: 0;
+	margin-right: 2rem;
+}
