@@ -1,5 +1,5 @@
 .date__expenditure {
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -11,7 +11,11 @@
 }
 
 .select-all {
-	align-self: end;
+	justify-content: end;
+}
+
+.select-all .tag__name {
+	flex-grow: 0;
 	margin-right: 2rem;
 }
 

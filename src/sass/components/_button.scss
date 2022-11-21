@@ -19,17 +19,17 @@
 
 	&--square {
 		border-radius: 1rem;
-		padding: 1rem 1rem;
-		font-size: 3rem;
+		padding: 0.8rem 0.8rem;
+		font-size: 2.8rem;
 	}
 
 	&--primary {
 		background-color: $color-primary;
 		color: $color-black-dark;
 		border-radius: 1rem;
-		padding: 1rem 2.5rem;
+		padding: 1rem 2rem;
 		align-self: stretch;
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 
 		&:hover {
 			transform: translateY(-0.3rem);
