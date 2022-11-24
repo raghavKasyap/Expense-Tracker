@@ -73,21 +73,21 @@
 }
 
 .delete-expense {
-	background-color: $color-red-primary;
-	color: $color-white;
-}
-
-.delete-expense:hover {
 	background-color: $color-red-dark;
 	color: $color-white;
 }
 
+.delete-expense:hover {
+	background-color: $color-red-primary;
+	color: $color-white;
+}
+
 .modify-expense {
-	background-color: $color-blue-primary;
+	background-color: $color-blue-dark;
 	color: $color-white;
 }
 
 .modify-expense:hover {
-	background-color: $color-blue-dark;
+	background-color: $color-blue-primary;
 	color: $color-white;
 }
