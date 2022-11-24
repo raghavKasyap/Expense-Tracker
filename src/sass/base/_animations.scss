@@ -1,0 +1,17 @@
+@keyframes shrink0 {
+	from {
+		width: 100%;
+	}
+	to {
+		width: 80%;
+	}
+}
+
+@keyframes grow0 {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
