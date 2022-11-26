@@ -34,13 +34,7 @@
 	}
 
 	&--summary {
-		background-color: $color-primary;
-		background-image: linear-gradient(
-			63deg,
-			$color-primary-dark 0%,
-			$color-primary 40%,
-			$color-primary-dark 90%
-		);
+		background-image: linear-gradient(to top left, #ffb003, #ffcb03);
 		color: $color-black-dark;
 		gap: 0px;
 		justify-content: space-between;

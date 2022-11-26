@@ -20,5 +20,8 @@
 	"devDependencies": {
 		"@parcel/transformer-sass": "^2.8.0",
 		"parcel": "^2.8.0"
+	},
+	"dependencies": {
+		"calendar-dates": "^2.7.2"
 	}
 }
