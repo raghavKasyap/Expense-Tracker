@@ -36,3 +36,12 @@
 		}
 	}
 }
+
+.date__expenditure-load {
+	animation: fade-load 1s ease-in-out infinite;
+	background-color: $color-black-light;
+	width: 3rem;
+	height: 1.5rem;
+	border-radius: 0.5rem;
+	filter: blur(5px);
+}

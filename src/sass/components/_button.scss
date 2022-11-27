@@ -30,7 +30,7 @@
 	}
 
 	&--primary {
-		background-color: $color-primary;
+		background-color: $color-primary-dark;
 		color: $color-black-dark;
 		border-radius: 1rem;
 		padding: 1rem 2rem;
@@ -38,11 +38,21 @@
 		font-size: 1.2rem;
 
 		&:hover {
-			transform: translateY(-0.3rem);
+			background-color: $color-primary;
 		}
 
 		&:active {
 			transform: translatey(-0rem);
 		}
+	}
+
+	&--outline {
+		padding: 0.7rem 2rem;
+		border: 2px $color-primary-dark solid;
+		border-radius: 2rem;
+		cursor: pointer;
+		transition: all 0.2s;
+		color: $color-primary-dark;
+		letter-spacing: 1px;
 	}
 }

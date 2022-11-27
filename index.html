@@ -5,7 +5,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<script src="https://unpkg.com/phosphor-icons"></script>
 		<link rel="shortcut icon" href="src/imgs/logo.png" type="image/x-icon" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,6 +18,8 @@
 		/>
 
 		<link rel="stylesheet" href="./src/sass/main.scss" />
+		<script defer type="module" src="./src/js/controller.js"></script>
+		<script src="https://unpkg.com/phosphor-icons"></script>
 		<title>Expense Tracker</title>
 	</head>
 	<body>
@@ -26,7 +27,9 @@
 		<div class="webapp-wrapper">
 			<nav class="navbar">
 				<img src="src/imgs/logo.png" alt="Logo" class="navbar__logo" />
-				<div class="navbar__nav-btn btn btn--square"><i class="ph-cardholder"></i></div>
+				<div class="navbar__nav-btn btn btn--square">
+					<i class="ph-cardholder"></i>
+				</div>
 				<div class="navbar__nav-btn btn btn--square"><i class="ph-gear"></i></div>
 				<div class="navbar__nav-btn btn btn--square sign-out">
 					<i class="ph-sign-out"></i>
@@ -35,6 +38,7 @@
 
 			<div class="topbar">
 				<div class="heading--primary">Main Dashboard</div>
+				<div class="btn--outline btn--today">Today</div>
 				<div class="profile profile--topbar">
 					<div class="profile__name">Raghav Kasyap</div>
 					<img src="src/imgs/profile_pic.jpg" alt="Logo" class="profile__picture" />
@@ -43,8 +47,8 @@
 
 			<main class="main">
 				<div class="section section--calendar">
-					<div class="calendar__label">
-						<div class="btn btn--circular">
+					<!-- <div class="calendar__label">
+						<div class="btn btn--circular btn--prevMonth">
 							<i class="ph-caret-left"></i>
 						</div>
 
@@ -52,18 +56,18 @@
 							<span class="label__month">December</span>
 							<span class="label__year">2022</span>
 						</div>
-						<div class="btn btn--circular">
+						<div class="btn btn--circular btn--nextMonth">
 							<i class="ph-caret-right"></i>
 						</div>
 					</div>
 
 					<div class="calendar__matrix">
+						<div class="calendar__matrix__cell calendar__matrix__cell--day">S</div>
 						<div class="calendar__matrix__cell calendar__matrix__cell--day">M</div>
 						<div class="calendar__matrix__cell calendar__matrix__cell--day">T</div>
 						<div class="calendar__matrix__cell calendar__matrix__cell--day">W</div>
 						<div class="calendar__matrix__cell calendar__matrix__cell--day">T</div>
 						<div class="calendar__matrix__cell calendar__matrix__cell--day">F</div>
-						<div class="calendar__matrix__cell calendar__matrix__cell--day">S</div>
 						<div class="calendar__matrix__cell calendar__matrix__cell--day">S</div>
 
 						<div class="calendar__matrix__cell"></div>
@@ -202,10 +206,19 @@
 							<div class="date">31</div>
 							<div class="date__expenditure"><i class="ph-currency-inr"></i> 900</div>
 						</div>
-
-						<div class="calendar__matrix__cell"></div>
-						<div class="calendar__matrix__cell"></div>
-					</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">31</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 900</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">31</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 900</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">31</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 900</div>
+						</div>
+					</div> -->
 				</div>
 
 				<div class="section section--tag">
@@ -333,8 +346,6 @@
 						</div>
 					</div>
 				</div>
-
-				<div class="section section--quote"></div>
 			</main>
 
 			<aside class="section section--expenses">
