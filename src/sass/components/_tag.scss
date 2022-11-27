@@ -11,10 +11,19 @@
 	display: flex;
 	gap: 2rem;
 	flex-shrink: 0;
-	font-size: 1.3rem;
+	font-size: 1.4rem;
 
 	&__name {
+		display: flex;
+		align-items: center;
 		flex-grow: 1;
+	}
+
+	&__total {
+		font-size: 1.2rem;
+		display: flex;
+		align-items: center;
+		color: $color-grey-dark;
 	}
 
 	&__color {
