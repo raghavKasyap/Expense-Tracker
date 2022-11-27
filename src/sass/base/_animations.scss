@@ -18,3 +18,14 @@
 		opacity: 0;
 	}
 }
+
+@keyframes message-appear {
+	from {
+		top: -10%;
+		opacity: 0;
+	}
+	to {
+		top: 3%;
+		opacity: 1;
+	}
+}

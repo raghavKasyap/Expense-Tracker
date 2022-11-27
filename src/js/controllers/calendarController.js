@@ -20,7 +20,7 @@ export const showCalendar = async function (date) {
 
 			calendarView.render(state.calendar)
 			calendarView.addChangeMonthHandlerRender(showCalendar)
-		}, 1000)
+		}, 2000)
 
 		console.log(state.calendar)
 	} catch (error) {}
