@@ -11,6 +11,11 @@
 		color: $color-black-dark;
 	}
 
+	&--active {
+		background-color: $color-primary;
+		color: $color-black-dark;
+	}
+
 	&--circular {
 		border-radius: 50%;
 		font-size: 2.5rem;
