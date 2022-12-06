@@ -1,20 +1,8 @@
-import { getMonthName } from '../utils'
+import { getMonthName, getISO } from '../miscellaneous/utils'
+import View from './View.js'
 
-class CalendarView {
-	#parentElement = document.querySelector('.section--calendar')
-	#data
-
-	render(data) {
-		this.#data = data
-
-		this._clear()
-		const markup = this._generateMarkup()
-		this.#parentElement.insertAdjacentHTML('afterbegin', markup)
-	}
-
-	_clear() {
-		this.#parentElement.innerHTML = ''
-	}
+class CalendarView extends View {
+	_parentElement = document.querySelector('.section--calendar')
 
 	_generateMarkup() {
 		const { prevMonth, prevYear } = this._findPrevDate()
@@ -27,8 +15,8 @@ class CalendarView {
                 </div>
 
                 <div class="heading--label">
-                    <span class="label__month">${getMonthName(this.#data.selectDate.month)}</span>
-                    <span class="label__year">${this.#data.selectDate.year}</span>
+                    <span class="label__month">${getMonthName(this._data.selectDate.month)}</span>
+                    <span class="label__year">${this._data.selectDate.year}</span>
                 </div>
                 <div class="btn btn--circular btn--changeMonth" data-update-month="${nextMonth}" data-update-year="${nextYear}">
                     <i class="ph-caret-right"></i>
@@ -44,7 +32,7 @@ class CalendarView {
                 <div class="calendar__matrix__cell calendar__matrix__cell--day">F</div>
                 <div class="calendar__matrix__cell calendar__matrix__cell--day">S</div>
 
-                ${this.#data.data
+                ${this._data.data
 					.map((ele) => {
 						switch (ele.type) {
 							case 'previous': {
@@ -54,11 +42,11 @@ class CalendarView {
 							case 'current': {
 								return `
                                     <div class="calendar__matrix__cell calendar__matrix__cell--date">
-                                            <div class="date" data-date="${ele.iso}">${
+                                            <div class="date" data-date="${ele.iso} ">${
 									ele.date
 								}</div>
                                             ${
-												this.#data.hasExpensesData
+												this._data.hasExpensesData
 													? ` <div class="date__expenditure">
                                                         <i class="ph-currency-inr"></i> ${ele.expense}
                                                     </div>
@@ -80,35 +68,31 @@ class CalendarView {
 	}
 
 	addChangeMonthHandlerRender(handler) {
-		document.querySelectorAll('.btn--changeMonth').forEach((btn) => {
-			btn.addEventListener('click', (e) => {
-				handler(
-					new Date(
-						e.currentTarget.dataset.updateYear,
-						e.currentTarget.dataset.updateMonth
-					)
-				)
-			})
+		this._parentElement.addEventListener('click', (e) => {
+			const btn = e.target.closest('.btn--changeMonth')
+			if (!btn) return
+
+			handler(new Date(btn.dataset.updateYear, btn.dataset.updateMonth))
 		})
 	}
 
 	_findPrevDate() {
 		return {
-			prevMonth: this.#data.selectDate.month === 0 ? 11 : this.#data.selectDate.month - 1,
+			prevMonth: this._data.selectDate.month === 0 ? 11 : this._data.selectDate.month - 1,
 			prevYear:
-				this.#data.selectDate.month === 0
-					? this.#data.selectDate.year - 1
-					: this.#data.selectDate.year,
+				this._data.selectDate.month === 0
+					? this._data.selectDate.year - 1
+					: this._data.selectDate.year,
 		}
 	}
 
 	_findNextDate() {
 		return {
-			nextMonth: this.#data.selectDate.month === 11 ? 0 : this.#data.selectDate.month + 1,
+			nextMonth: this._data.selectDate.month === 11 ? 0 : this._data.selectDate.month + 1,
 			nextYear:
-				this.#data.selectDate.month === 11
-					? this.#data.selectDate.year + 1
-					: this.#data.selectDate.year,
+				this._data.selectDate.month === 11
+					? this._data.selectDate.year + 1
+					: this._data.selectDate.year,
 		}
 	}
 }

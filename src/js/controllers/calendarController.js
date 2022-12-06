@@ -12,19 +12,28 @@ export const showCalendar = async function (date) {
 		state.calendar.hasExpensesData = false
 
 		calendarView.render(state.calendar)
-		calendarView.addChangeMonthHandlerRender(showCalendar)
 		// calendarView.render() with load animation
 
 		newTimer = setTimeout(async () => {
 			await calendarModal.loadCalendarExpenses(state.calendar)
-
 			calendarView.render(state.calendar)
-			calendarView.addChangeMonthHandlerRender(showCalendar)
-		}, 2000)
+		}, 1000)
 
 		console.log(state.calendar)
 	} catch (error) {}
 }
+
+export const addHandlers = function () {
+	calendarView.addChangeMonthHandlerRender(showCalendar)
+
+	// Today btn handler
+	document.querySelector('.btn--today').addEventListener('click', () => {
+		showCalendar(state.currDate)
+	})
+}
+
+// TODO
+// Make a controller for today
 
 // document.querySelector('.btn--nextMonth').addEventListener('click', (e) => {
 // 	showCalendar(new Date(e.currentTarget.dataset.updateYear, e.currentTarget.dataset.updateMonth))
