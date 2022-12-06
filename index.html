@@ -27,7 +27,7 @@
 		<div class="webapp-wrapper">
 			<nav class="navbar">
 				<img src="src/imgs/logo.png" alt="Logo" class="navbar__logo" />
-				<div class="navbar__nav-btn btn btn--square">
+				<div class="navbar__nav-btn btn btn--square btn--active">
 					<i class="ph-cardholder"></i>
 				</div>
 				<div class="navbar__nav-btn btn btn--square"><i class="ph-gear"></i></div>
@@ -240,7 +240,8 @@
 					</div>
 
 					<div class="tag-container">
-						<div class="tag" id="tag--1">
+						<div class="tag--loading"></div>
+						<!-- <div class="tag" id="tag--1">
 							<input type="checkbox" name="select all" id="0" />
 							<div class="tag__name">Food</div>
 							<div class="tag__total"><i class="ph-currency-inr"></i> 900</div>
@@ -320,7 +321,7 @@
 							<div class="tag__name">Subscription</div>
 							<div class="tag__total"><i class="ph-currency-inr"></i> 900</div>
 							<div class="tag__color"></div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 
@@ -361,7 +362,12 @@
 				</div>
 
 				<div class="expenses-container">
-					<div class="expense-box">
+					<!-- <div class="expense-box--loading"></div>
+					<div class="expense-box--loading"></div>
+					<div class="expense-box--loading"></div>
+					<div class="expense-box--loading"></div>
+					<div class="expense-box--loading"></div> -->
+					<!-- <div class="expense-box">
 						<div class="expense">
 							<div class="expense__title">expense 1</div>
 							<img
@@ -608,7 +614,7 @@
 							<div class="expense__tag">friends</div>
 							<div class="expense__tag">food</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</aside>
 
@@ -617,7 +623,7 @@
 				<button class="close-modal">&times;</button>
 			</div>
 
-			<div class="message message--success hidden"></div>
+			<div class="message message--failure hidden"></div>
 		</div>
 	</body>
 </html>

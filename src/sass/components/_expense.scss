@@ -20,6 +20,14 @@
 		max-width: 15%;
 		gap: 1rem;
 	}
+
+	&--loading {
+		height: 300px;
+		width: 100%;
+		background: linear-gradient(90deg, rgba(51, 51, 51, 0.1) 10%, rgba(51, 51, 51, 0.7) 70%);
+		background-size: 200% 200%;
+		animation: blur-box-load 1s ease infinite;
+	}
 }
 
 .expense {
