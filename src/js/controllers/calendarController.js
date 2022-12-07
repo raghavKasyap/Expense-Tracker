@@ -1,6 +1,9 @@
 import * as calendarModal from './../models/calendarModel.js'
+import * as expenditureModal from './../models/expenditureModal.js'
+
 import calendarView from '../views/calendarView.js'
 import state from '../state.js'
+import { showExpenditures } from './expenditureController.js'
 
 let newTimer
 
@@ -18,13 +21,18 @@ export const showCalendar = async function (date) {
 			await calendarModal.loadCalendarExpenses(state.calendar)
 			calendarView.render(state.calendar)
 		}, 1000)
-
-		console.log(state.calendar)
 	} catch (error) {}
+}
+
+const selectDateController = function (date) {
+	calendarModal.updateSelectDate(new Date(date))
+	expenditureModal.updateSelectDate(date)
+	showExpenditures(state.expenditure)
 }
 
 export const addHandlers = function () {
 	calendarView.addChangeMonthHandlerRender(showCalendar)
+	calendarView.addDateHandler(selectDateController)
 
 	// Today btn handler
 	document.querySelector('.btn--today').addEventListener('click', () => {

@@ -41,10 +41,10 @@ class CalendarView extends View {
 
 							case 'current': {
 								return `
-                                    <div class="calendar__matrix__cell calendar__matrix__cell--date">
-                                            <div class="date" data-date="${ele.iso} ">${
-									ele.date
-								}</div>
+                                    <div class="calendar__matrix__cell calendar__matrix__cell--date" data-date="${
+										ele.iso
+									}">
+                                            <div class="date">${ele.date}</div>
                                             ${
 												this._data.hasExpensesData
 													? ` <div class="date__expenditure">
@@ -73,6 +73,16 @@ class CalendarView extends View {
 			if (!btn) return
 
 			handler(new Date(btn.dataset.updateYear, btn.dataset.updateMonth))
+		})
+	}
+
+	addDateHandler(handler) {
+		this._parentElement.addEventListener('click', (e) => {
+			const dateCell = e.target.closest('.calendar__matrix__cell--date')
+
+			if (!dateCell) return
+
+			handler(dateCell.dataset.date)
 		})
 	}
 

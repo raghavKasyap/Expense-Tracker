@@ -5,4 +5,9 @@ export default state = {
 		hasExpensesData: false,
 		data: [],
 	},
+	expenditure: {
+		selectDate: {},
+		hasData: false,
+		expenditures: {},
+	},
 }

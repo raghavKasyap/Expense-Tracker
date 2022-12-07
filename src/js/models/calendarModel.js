@@ -3,15 +3,19 @@ import state from '../state.js'
 import { wait, getISO } from '../miscellaneous/utils.js'
 
 export const loadCalendar = async function (date) {
-	state.calendar.selectDate.year = date.getFullYear()
-	state.calendar.selectDate.month = date.getMonth()
-	state.calendar.selectDate.date = date.getDate()
-	state.calendar.selectDate.iso = getISO(date)
+	updateSelectDate(date)
 
 	const calendarDates = new CalendarDates()
 	const data = await calendarDates.getDates(date)
 
 	state.calendar.data = data.filter(({ type }) => type === 'current' || type === 'previous')
+}
+
+export const updateSelectDate = function (date) {
+	state.calendar.selectDate.year = date.getFullYear()
+	state.calendar.selectDate.month = date.getMonth()
+	state.calendar.selectDate.date = date.getDate()
+	state.calendar.selectDate.iso = getISO(date)
 }
 
 export const loadCalendarExpenses = async function (calendar) {

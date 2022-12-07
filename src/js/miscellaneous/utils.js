@@ -40,3 +40,9 @@ export const getISO = function (date) {
 	date = new Date(date.getTime() - offset * 60 * 1000)
 	return date.toISOString().split('T')[0]
 }
+
+export const formatDate = function (date) {
+	const dateArr = date.split('-')
+	dateArr.reverse()
+	return dateArr.join('/')
+}
