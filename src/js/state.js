@@ -10,4 +10,5 @@ export default state = {
 		hasData: false,
 		expenditures: {},
 	},
+	tags: {},
 }

@@ -9,6 +9,13 @@ export default class View {
 		this._parentElement.insertAdjacentHTML('afterbegin', markup)
 	}
 
+	renderLoader() {
+		this._clear()
+
+		const markup = 'Loading'
+		this._parentElement.insertAdjacentHTML('afterbegin', markup)
+	}
+
 	update(data) {
 		this._data = data
 

@@ -1,4 +1,7 @@
 import { formatDate } from '../miscellaneous/utils'
+import gpay from 'url:../../imgs/google-pay-icon.png'
+import hdfc from 'url:../../imgs/HDFC-Bank-logo.png'
+
 import View from './View'
 
 class ExpenditureView extends View {
@@ -11,12 +14,12 @@ class ExpenditureView extends View {
                 <div class="expense">
                     <div class="expense__title">expense 1</div>
                     <img
-                        src="./src/imgs/google-pay-icon.png"
+                        src="${gpay}"
                         alt=""
                         class="expense__mode-of-pay"
                     />
 
-                    <img src="./src/imgs/HDFC-Bank-logo.png" alt="" class="expense__bank" />
+                    <img src="${hdfc}" alt="" class="expense__bank" />
                     <div class="expense__total-wrapper">
                         <i class="ph-currency-inr"></i>
                         <span class="expnese__total">1000</span>
@@ -41,14 +44,14 @@ class ExpenditureView extends View {
 
             <div class="expense-box">
                 <div class="expense">
-                    <div class="expense__title">expense 2</div>
+                    <div class="expense__title">expense 1</div>
                     <img
-                        src="./src/imgs/google-pay-icon.png"
+                        src="${gpay}"
                         alt=""
                         class="expense__mode-of-pay"
                     />
 
-                    <img src="./src/imgs/HDFC-Bank-logo.png" alt="" class="expense__bank" />
+                    <img src="${hdfc}" alt="" class="expense__bank" />
                     <div class="expense__total-wrapper">
                         <i class="ph-currency-inr"></i>
                         <span class="expnese__total">1000</span>
@@ -73,14 +76,14 @@ class ExpenditureView extends View {
 
             <div class="expense-box">
                 <div class="expense">
-                    <div class="expense__title">expense 3</div>
+                    <div class="expense__title">expense 1</div>
                     <img
-                        src="./src/imgs/google-pay-icon.png"
+                        src="${gpay}"
                         alt=""
                         class="expense__mode-of-pay"
                     />
 
-                    <img src="./src/imgs/HDFC-Bank-logo.png" alt="" class="expense__bank" />
+                    <img src="${hdfc}" alt="" class="expense__bank" />
                     <div class="expense__total-wrapper">
                         <i class="ph-currency-inr"></i>
                         <span class="expnese__total">1000</span>
@@ -105,14 +108,14 @@ class ExpenditureView extends View {
 
             <div class="expense-box">
                 <div class="expense">
-                    <div class="expense__title">expense 4</div>
+                    <div class="expense__title">expense 1</div>
                     <img
-                        src="./src/imgs/google-pay-icon.png"
+                        src="${gpay}"
                         alt=""
                         class="expense__mode-of-pay"
                     />
 
-                    <img src="./src/imgs/HDFC-Bank-logo.png" alt="" class="expense__bank" />
+                    <img src="${hdfc}" alt="" class="expense__bank" />
                     <div class="expense__total-wrapper">
                         <i class="ph-currency-inr"></i>
                         <span class="expnese__total">1000</span>
@@ -137,14 +140,14 @@ class ExpenditureView extends View {
 
             <div class="expense-box">
                 <div class="expense">
-                    <div class="expense__title">expense 5</div>
+                    <div class="expense__title">expense 1</div>
                     <img
-                        src="./src/imgs/google-pay-icon.png"
+                        src="${gpay}"
                         alt=""
                         class="expense__mode-of-pay"
                     />
 
-                    <img src="./src/imgs/HDFC-Bank-logo.png" alt="" class="expense__bank" />
+                    <img src="${hdfc}" alt="" class="expense__bank" />
                     <div class="expense__total-wrapper">
                         <i class="ph-currency-inr"></i>
                         <span class="expnese__total">1000</span>
@@ -169,46 +172,14 @@ class ExpenditureView extends View {
 
             <div class="expense-box">
                 <div class="expense">
-                    <div class="expense__title">expense 6</div>
+                    <div class="expense__title">expense 1</div>
                     <img
-                        src="./src/imgs/google-pay-icon.png"
+                        src="${gpay}"
                         alt=""
                         class="expense__mode-of-pay"
                     />
 
-                    <img src="./src/imgs/HDFC-Bank-logo.png" alt="" class="expense__bank" />
-                    <div class="expense__total-wrapper">
-                        <i class="ph-currency-inr"></i>
-                        <span class="expnese__total">1000</span>
-                    </div>
-
-                    <div class="expense__actions">
-                        <div class="modify-expense btn btn--square--small">
-                            <i class="ph-note-pencil"></i>
-                        </div>
-                        <div class="delete-expense btn btn--square--small">
-                            <i class="ph-trash"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="expense__tags">
-                    <div class="expense__tag">food</div>
-                    <div class="expense__tag">entertainment</div>
-                    <div class="expense__tag">friends</div>
-                    <div class="expense__tag">food</div>
-                </div>
-            </div>
-
-            <div class="expense-box">
-                <div class="expense">
-                    <div class="expense__title">expense 7</div>
-                    <img
-                        src="./src/imgs/google-pay-icon.png"
-                        alt=""
-                        class="expense__mode-of-pay"
-                    />
-
-                    <img src="./src/imgs/HDFC-Bank-logo.png" alt="" class="expense__bank" />
+                    <img src="${hdfc}" alt="" class="expense__bank" />
                     <div class="expense__total-wrapper">
                         <i class="ph-currency-inr"></i>
                         <span class="expnese__total">1000</span>
