@@ -201,6 +201,102 @@ class ExpenditureView extends View {
                     <div class="expense__tag">food</div>
                 </div>
             </div>
+
+            <div class="expense-box">
+                <div class="expense">
+                    <div class="expense__title">expense 1</div>
+                    <img
+                        src="${gpay}"
+                        alt=""
+                        class="expense__mode-of-pay"
+                    />
+
+                    <img src="${hdfc}" alt="" class="expense__bank" />
+                    <div class="expense__total-wrapper">
+                        <i class="ph-currency-inr"></i>
+                        <span class="expnese__total">1000</span>
+                    </div>
+
+                    <div class="expense__actions">
+                        <div class="modify-expense btn btn--square--small">
+                            <i class="ph-note-pencil"></i>
+                        </div>
+                        <div class="delete-expense btn btn--square--small">
+                            <i class="ph-trash"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="expense__tags">
+                    <div class="expense__tag">food</div>
+                    <div class="expense__tag">entertainment</div>
+                    <div class="expense__tag">friends</div>
+                    <div class="expense__tag">food</div>
+                </div>
+            </div>
+
+            <div class="expense-box">
+                <div class="expense">
+                    <div class="expense__title">expense 1</div>
+                    <img
+                        src="${gpay}"
+                        alt=""
+                        class="expense__mode-of-pay"
+                    />
+
+                    <img src="${hdfc}" alt="" class="expense__bank" />
+                    <div class="expense__total-wrapper">
+                        <i class="ph-currency-inr"></i>
+                        <span class="expnese__total">1000</span>
+                    </div>
+
+                    <div class="expense__actions">
+                        <div class="modify-expense btn btn--square--small">
+                            <i class="ph-note-pencil"></i>
+                        </div>
+                        <div class="delete-expense btn btn--square--small">
+                            <i class="ph-trash"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="expense__tags">
+                    <div class="expense__tag">food</div>
+                    <div class="expense__tag">entertainment</div>
+                    <div class="expense__tag">friends</div>
+                    <div class="expense__tag">food</div>
+                </div>
+            </div>
+
+            <div class="expense-box">
+                <div class="expense">
+                    <div class="expense__title">expense 1</div>
+                    <img
+                        src="${gpay}"
+                        alt=""
+                        class="expense__mode-of-pay"
+                    />
+
+                    <img src="${hdfc}" alt="" class="expense__bank" />
+                    <div class="expense__total-wrapper">
+                        <i class="ph-currency-inr"></i>
+                        <span class="expnese__total">1000</span>
+                    </div>
+
+                    <div class="expense__actions">
+                        <div class="modify-expense btn btn--square--small">
+                            <i class="ph-note-pencil"></i>
+                        </div>
+                        <div class="delete-expense btn btn--square--small">
+                            <i class="ph-trash"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="expense__tags">
+                    <div class="expense__tag">food</div>
+                    <div class="expense__tag">entertainment</div>
+                    <div class="expense__tag">friends</div>
+                    <div class="expense__tag">food</div>
+                </div>
+            </div>
             `
 			: `
                 <div class="expense-box--loading"></div>
