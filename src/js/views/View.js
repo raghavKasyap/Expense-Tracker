@@ -12,7 +12,10 @@ export default class View {
 	renderLoader() {
 		this._clear()
 
-		const markup = 'Loading'
+		const markup = `<div class="loader-box">
+								<div class="loader"></div>
+							</div>`
+
 		this._parentElement.insertAdjacentHTML('afterbegin', markup)
 	}
 

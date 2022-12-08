@@ -3,7 +3,7 @@ import state from '../state'
 
 export const loadExpendituresOnDate = async function (date) {
 	// call to backend to get data for current date
-	await wait(2)
+	await wait(3)
 
 	state.expenditure.hasData = true
 	state.expenditure.expenditures = {}
