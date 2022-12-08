@@ -99,3 +99,7 @@
 	background-color: $color-blue-primary;
 	color: $color-white;
 }
+
+.delete {
+	animation: delete-expense 1s ease forwards;
+}

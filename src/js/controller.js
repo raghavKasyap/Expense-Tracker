@@ -15,6 +15,7 @@ const init = function () {
 
 	//Adding all the hanlders here..
 	calendarController.addHandlers()
+	expenditureController.addHandlers()
 	console.log(state)
 }
 
