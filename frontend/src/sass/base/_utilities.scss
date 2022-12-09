@@ -1,0 +1,24 @@
+.date__expenditure {
+	font-size: 1.2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $color-primary;
+}
+
+.ph-currency-inr {
+	transform: translateY(0.1rem);
+}
+
+.currency-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.hidden {
+	opacity: 0;
+}
+
+.visuallyhidden {
+	display: none;
+}

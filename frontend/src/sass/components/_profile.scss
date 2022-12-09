@@ -1,0 +1,18 @@
+.profile {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	font-size: 1.6rem;
+
+	&__picture {
+		width: 4.5rem;
+		height: 4.5rem;
+		display: inline-block;
+		border-radius: 1rem;
+	}
+
+	&--topbar {
+		justify-content: end;
+		margin-left: auto;
+	}
+}

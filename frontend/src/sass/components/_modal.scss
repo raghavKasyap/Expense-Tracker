@@ -1,0 +1,31 @@
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	background-color: $color-black-medium;
+	border-radius: 5px;
+	box-shadow: 0 3rem 6rem 1rem rgba(0, 0, 0);
+	z-index: 10;
+	padding: 2rem 1.5rem;
+	transition: all 0.1s;
+
+	&--add-tag {
+		width: 30%;
+		height: 30%;
+		font-size: 2px;
+	}
+}
+
+.btn--close-modal {
+	position: absolute;
+	top: 1rem;
+	right: 1.5rem;
+	font-size: 3.5rem;
+	color: $color-white-1;
+	cursor: pointer;
+	border: none;
+	background: none;
+	transition: all 0.2s;
+}

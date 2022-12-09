@@ -1,0 +1,9 @@
+.summary {
+	display: flex;
+	justify-content: space-between;
+
+	&__icon {
+		font-size: 3rem;
+		margin-left: auto;
+	}
+}

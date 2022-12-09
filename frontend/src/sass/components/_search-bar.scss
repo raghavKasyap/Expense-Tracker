@@ -1,0 +1,23 @@
+.search-bar {
+	font-size: 1.3rem;
+	margin-right: 2rem;
+	padding: 1rem;
+	background-color: $color-black-medium;
+	border: none;
+	border-bottom: 1px solid $color-white;
+	color: $color-white;
+	font-family: 'Montserrat', sans-serif;
+	transition: all 0.2s;
+
+	&::placeholder {
+		color: $color-grey-dark;
+	}
+
+	&:placeholder-shown {
+		border-bottom: 0.1rem solid $color-grey-dark;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}

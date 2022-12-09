@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="shortcut icon" href="src/imgs/logo.png" type="image/x-icon" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="./src/sass/main.scss" />
+		<script defer type="module" src="./src/js/controller.js"></script>
+		<script src="https://unpkg.com/phosphor-icons"></script>
+		<title>Expense Tracker</title>
+	</head>
+	<body>
+		<!--  -->
+		<div class="webapp-wrapper">
+			<nav class="navbar">
+				<img src="src/imgs/logo.png" alt="Logo" class="navbar__logo" />
+				<div class="navbar__nav-btn btn btn--square btn--active">
+					<i class="ph-cardholder"></i>
+				</div>
+				<div class="navbar__nav-btn btn btn--square"><i class="ph-gear"></i></div>
+				<div class="navbar__nav-btn btn btn--square sign-out">
+					<i class="ph-sign-out"></i>
+				</div>
+			</nav>
+
+			<div class="topbar">
+				<div class="heading--primary">Main Dashboard</div>
+				<div class="btn--outline btn--today">Today</div>
+				<div class="profile profile--topbar">
+					<div class="profile__name">Raghav Kasyap</div>
+					<img src="src/imgs/profile_pic.jpg" alt="Logo" class="profile__picture" />
+				</div>
+			</div>
+
+			<main class="main">
+				<div class="section section--calendar">
+					<!-- <div class="calendar__label">
+						<div class="btn btn--circular btn--prevMonth">
+							<i class="ph-caret-left"></i>
+						</div>
+
+						<div class="heading--label">
+							<span class="label__month">December</span>
+							<span class="label__year">2022</span>
+						</div>
+						<div class="btn btn--circular btn--nextMonth">
+							<i class="ph-caret-right"></i>
+						</div>
+					</div>
+
+					<div class="calendar__matrix">
+						<div class="calendar__matrix__cell calendar__matrix__cell--day">S</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--day">M</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--day">T</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--day">W</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--day">T</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--day">F</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--day">S</div>
+
+						<div class="calendar__matrix__cell"></div>
+						<div class="calendar__matrix__cell"></div>
+
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">1</div>
+							<div class="date__expenditure">
+								<i class="ph-currency-inr"></i> 1200
+							</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">2</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 100</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">3</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 200</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">4</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 450</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">5</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 780</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">6</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 420</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">7</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 220</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">8</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 240</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">9</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 0</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">10</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 10</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">11</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 245</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">12</div>
+							<div class="date__expenditure">
+								<i class="ph-currency-inr"></i> 1223
+							</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">13</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 170</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">14</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 51</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">15</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 43</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">16</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 67</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">17</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 186</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">18</div>
+							<div class="date__expenditure">
+								<i class="ph-currency-inr"></i>
+								<span class="expenditure">1000</span>
+							</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">19</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 250</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">20</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 100</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">21</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 80</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">22</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 890</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">23</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 154</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">24</div>
+							<div class="date__expenditure">
+								<i class="ph-currency-inr"></i> 4000
+							</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">25</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 750</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">26</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 105</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">27</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 140</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">28</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 120</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">29</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 40</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">30</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 50</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">31</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 900</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">31</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 900</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">31</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 900</div>
+						</div>
+						<div class="calendar__matrix__cell calendar__matrix__cell--date">
+							<div class="date">31</div>
+							<div class="date__expenditure"><i class="ph-currency-inr"></i> 900</div>
+						</div>
+					</div> -->
+				</div>
+
+				<div class="section section--tag">
+					<input
+						type="text"
+						class="search-bar"
+						placeholder="&#xF002;  Search.."
+						style="font-family: Arial, FontAwesome"
+					/>
+
+					<div class="section__header section__header--scroll">
+						<div class="heading--tertiary--main">Your Tags</div>
+						<div class="btn-add-tag btn btn--primary">Add Tag</div>
+					</div>
+
+					<div class="tag select-all">
+						<input type="checkbox" name="select all" id="0" class="tag__checkbox" />
+						<div class="tag__name">Select All</div>
+					</div>
+
+					<div class="tag-container">
+						<div class="tag--loading"></div>
+						<!-- <div class="tag" id="tag--1">
+							<input type="checkbox" name="select all" id="0" />
+							<div class="tag__name">Food</div>
+							<div class="tag__total"><i class="ph-currency-inr"></i> 900</div>
+							<div class="tag__color"></div>
+						</div>
+
+						<div class="tag" id="tag--2">
+							<input type="checkbox" name="select all" id="0" />
+							<div class="tag__name">Clothing</div>
+							<div class="tag__total"><i class="ph-currency-inr"></i> 900</div>
+							<div class="tag__color"></div>
+						</div>
+
+						<div class="tag" id="tag--3">
+							<input type="checkbox" name="select all" id="0" />
+							<div class="tag__name">Travel</div>
+							<div class="tag__total"><i class="ph-currency-inr"></i> 900</div>
+							<div class="tag__color"></div>
+						</div>
+
+						<div class="tag" id="tag--4">
+							<input type="checkbox" name="select all" id="0" />
+							<div class="tag__name">Subscription</div>
+							<div class="tag__total"><i class="ph-currency-inr"></i> 900</div>
+							<div class="tag__color"></div>
+						</div>
+						<div class="tag" id="tag--1">
+							<input type="checkbox" name="select all" id="0" />
+							<div class="tag__name">Food</div>
+							<div class="tag__total"><i class="ph-currency-inr"></i> 900</div>
+							<div class="tag__color"></div>
+						</div>
+
+						<div class="tag" id="tag--2">
+							<input type="checkbox" name="select all" id="0" />
+							<div class="tag__name">Clothing</div>
+							<div class="tag__total"><i class="ph-currency-inr"></i> 900</div>
+							<div class="tag__color"></div>
+						</div>
+
+						<div class="tag" id="tag--3">
+							<input type="checkbox" name="select all" id="0" />
+							<div class="tag__name">Travel</div>
+							<div class="tag__total"><i class="ph-currency-inr"></i> 900</div>
+							<div class="tag__color"></div>
+						</div>
+
+						<div class="tag" id="tag--4">
+							<input type="checkbox" name="select all" id="0" />
+							<div class="tag__name">Subscription</div>
+							<div class="tag__total"><i class="ph-currency-inr"></i> 900</div>
+							<div class="tag__color"></div>
+						</div>
+						<div class="tag" id="tag--1">
+							<input type="checkbox" name="select all" id="0" />
+							<div class="tag__name">Food</div>
+							<div class="tag__total"><i class="ph-currency-inr"></i> 900</div>
+							<div class="tag__color"></div>
+						</div>
+
+						<div class="tag" id="tag--2">
+							<input type="checkbox" name="select all" id="0" />
+							<div class="tag__name">Clothing</div>
+							<div class="tag__total"><i class="ph-currency-inr"></i> 900</div>
+							<div class="tag__color"></div>
+						</div>
+
+						<div class="tag" id="tag--3">
+							<input type="checkbox" name="select all" id="0" />
+							<div class="tag__name">Travel</div>
+							<div class="tag__total"><i class="ph-currency-inr"></i> 900</div>
+							<div class="tag__color"></div>
+						</div>
+
+						<div class="tag" id="tag--4">
+							<input type="checkbox" name="select all" id="0" />
+							<div class="tag__name">Subscription</div>
+							<div class="tag__total"><i class="ph-currency-inr"></i> 900</div>
+							<div class="tag__color"></div>
+						</div> -->
+					</div>
+				</div>
+
+				<div class="section section--summary">
+					<div class="section__header">
+						<div class="heading--secondary--bold">Total Expenditure</div>
+						<i class="ph-receipt summary__icon"></i>
+					</div>
+
+					<div class="summary">
+						This Month
+						<div class="currency-wrapper">
+							<i class="ph-currency-inr"></i>
+							<span class="montly-total">1000</span>
+						</div>
+					</div>
+
+					<div class="summary">
+						Overall
+						<div class="currency-wrapper">
+							<i class="ph-currency-inr"></i>
+							<span class="overall-total">100000</span>
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<aside class="section section--expenses">
+				<div class="section__header section__header--scroll">
+					<div class="heading--twoline">
+						<div class="heading--tertiary--main">Your Expenditures</div>
+						<div class="heading--tertiary--sub">
+							on <span class="date--selected">12/12/2022</span>
+						</div>
+					</div>
+
+					<div class="btn btn--primary btn-addExpense">Add Expense</div>
+				</div>
+
+				<div class="expenses-container">
+					<!-- <div class="expense-box--loading"></div>
+					<div class="expense-box--loading"></div>
+					<div class="expense-box--loading"></div>
+					<div class="expense-box--loading"></div>
+					<div class="expense-box--loading"></div> -->
+					<!-- <div class="expense-box">
+						<div class="expense">
+							<div class="expense__title">expense 1</div>
+							<img
+								src="./src/imgs/google-pay-icon.png"
+								alt=""
+								class="expense__mode-of-pay"
+							/>
+
+							<img src="./src/imgs/HDFC-Bank-logo.png" alt="" class="expense__bank" />
+							<div class="expense__total-wrapper">
+								<i class="ph-currency-inr"></i>
+								<span class="expnese__total">1000</span>
+							</div>
+
+							<div class="expense__actions">
+								<div class="modify-expense btn btn--square--small">
+									<i class="ph-note-pencil"></i>
+								</div>
+								<div class="delete-expense btn btn--square--small">
+									<i class="ph-trash"></i>
+								</div>
+							</div>
+						</div>
+						<div class="expense__tags">
+							<div class="expense__tag">food</div>
+							<div class="expense__tag">entertainment</div>
+							<div class="expense__tag">friends</div>
+							<div class="expense__tag">food</div>
+						</div>
+					</div>
+					<div class="expense-box">
+						<div class="expense">
+							<div class="expense__title">expense 1</div>
+							<img
+								src="./src/imgs/google-pay-icon.png"
+								alt=""
+								class="expense__mode-of-pay"
+							/>
+
+							<img src="./src/imgs/HDFC-Bank-logo.png" alt="" class="expense__bank" />
+							<div class="expense__total-wrapper">
+								<i class="ph-currency-inr"></i>
+								<span class="expnese__total">1000</span>
+							</div>
+
+							<div class="expense__actions">
+								<div class="modify-expense btn btn--square--small">
+									<i class="ph-note-pencil"></i>
+								</div>
+								<div class="delete-expense btn btn--square--small">
+									<i class="ph-trash"></i>
+								</div>
+							</div>
+						</div>
+						<div class="expense__tags">
+							<div class="expense__tag">food</div>
+							<div class="expense__tag">entertainment</div>
+							<div class="expense__tag">friends</div>
+							<div class="expense__tag">food</div>
+						</div>
+					</div>
+					<div class="expense-box">
+						<div class="expense">
+							<div class="expense__title">expense 1</div>
+							<img
+								src="./src/imgs/google-pay-icon.png"
+								alt=""
+								class="expense__mode-of-pay"
+							/>
+
+							<img src="./src/imgs/HDFC-Bank-logo.png" alt="" class="expense__bank" />
+							<div class="expense__total-wrapper">
+								<i class="ph-currency-inr"></i>
+								<span class="expnese__total">1000</span>
+							</div>
+
+							<div class="expense__actions">
+								<div class="modify-expense btn btn--square--small">
+									<i class="ph-note-pencil"></i>
+								</div>
+								<div class="delete-expense btn btn--square--small">
+									<i class="ph-trash"></i>
+								</div>
+							</div>
+						</div>
+						<div class="expense__tags">
+							<div class="expense__tag">food</div>
+							<div class="expense__tag">entertainment</div>
+							<div class="expense__tag">friends</div>
+							<div class="expense__tag">food</div>
+						</div>
+					</div>
+					<div class="expense-box">
+						<div class="expense">
+							<div class="expense__title">expense 1</div>
+							<img
+								src="./src/imgs/google-pay-icon.png"
+								alt=""
+								class="expense__mode-of-pay"
+							/>
+
+							<img src="./src/imgs/HDFC-Bank-logo.png" alt="" class="expense__bank" />
+							<div class="expense__total-wrapper">
+								<i class="ph-currency-inr"></i>
+								<span class="expnese__total">1000</span>
+							</div>
+
+							<div class="expense__actions">
+								<div class="modify-expense btn btn--square--small">
+									<i class="ph-note-pencil"></i>
+								</div>
+								<div class="delete-expense btn btn--square--small">
+									<i class="ph-trash"></i>
+								</div>
+							</div>
+						</div>
+						<div class="expense__tags">
+							<div class="expense__tag">food</div>
+							<div class="expense__tag">entertainment</div>
+							<div class="expense__tag">friends</div>
+							<div class="expense__tag">food</div>
+						</div>
+					</div>
+					<div class="expense-box">
+						<div class="expense">
+							<div class="expense__title">expense 1</div>
+							<img
+								src="./src/imgs/google-pay-icon.png"
+								alt=""
+								class="expense__mode-of-pay"
+							/>
+
+							<img src="./src/imgs/HDFC-Bank-logo.png" alt="" class="expense__bank" />
+							<div class="expense__total-wrapper">
+								<i class="ph-currency-inr"></i>
+								<span class="expnese__total">1000</span>
+							</div>
+
+							<div class="expense__actions">
+								<div class="modify-expense btn btn--square--small">
+									<i class="ph-note-pencil"></i>
+								</div>
+								<div class="delete-expense btn btn--square--small">
+									<i class="ph-trash"></i>
+								</div>
+							</div>
+						</div>
+						<div class="expense__tags">
+							<div class="expense__tag">food</div>
+							<div class="expense__tag">entertainment</div>
+							<div class="expense__tag">friends</div>
+							<div class="expense__tag">food</div>
+						</div>
+					</div>
+					<div class="expense-box">
+						<div class="expense">
+							<div class="expense__title">expense 1</div>
+							<img
+								src="./src/imgs/google-pay-icon.png"
+								alt=""
+								class="expense__mode-of-pay"
+							/>
+
+							<img src="./src/imgs/HDFC-Bank-logo.png" alt="" class="expense__bank" />
+							<div class="expense__total-wrapper">
+								<i class="ph-currency-inr"></i>
+								<span class="expnese__total">1000</span>
+							</div>
+
+							<div class="expense__actions">
+								<div class="modify-expense btn btn--square--small">
+									<i class="ph-note-pencil"></i>
+								</div>
+								<div class="delete-expense btn btn--square--small">
+									<i class="ph-trash"></i>
+								</div>
+							</div>
+						</div>
+						<div class="expense__tags">
+							<div class="expense__tag">food</div>
+							<div class="expense__tag">entertainment</div>
+							<div class="expense__tag">friends</div>
+							<div class="expense__tag">food</div>
+						</div>
+					</div>
+					<div class="expense-box">
+						<div class="expense">
+							<div class="expense__title">expense 1</div>
+							<img
+								src="./src/imgs/google-pay-icon.png"
+								alt=""
+								class="expense__mode-of-pay"
+							/>
+
+							<img src="./src/imgs/HDFC-Bank-logo.png" alt="" class="expense__bank" />
+							<div class="expense__total-wrapper">
+								<i class="ph-currency-inr"></i>
+								<span class="expnese__total">1000</span>
+							</div>
+
+							<div class="expense__actions">
+								<div class="modify-expense btn btn--square--small">
+									<i class="ph-note-pencil"></i>
+								</div>
+								<div class="delete-expense btn btn--square--small">
+									<i class="ph-trash"></i>
+								</div>
+							</div>
+						</div>
+						<div class="expense__tags">
+							<div class="expense__tag">food</div>
+							<div class="expense__tag">entertainment</div>
+							<div class="expense__tag">friends</div>
+							<div class="expense__tag">food</div>
+						</div>
+					</div>
+					<div class="expense-box">
+						<div class="expense">
+							<div class="expense__title">expense 1</div>
+							<img
+								src="./src/imgs/google-pay-icon.png"
+								alt=""
+								class="expense__mode-of-pay"
+							/>
+
+							<img src="./src/imgs/HDFC-Bank-logo.png" alt="" class="expense__bank" />
+							<div class="expense__total-wrapper">
+								<i class="ph-currency-inr"></i>
+								<span class="expnese__total">1000</span>
+							</div>
+
+							<div class="expense__actions">
+								<div class="modify-expense btn btn--square--small">
+									<i class="ph-note-pencil"></i>
+								</div>
+								<div class="delete-expense btn btn--square--small">
+									<i class="ph-trash"></i>
+								</div>
+							</div>
+						</div>
+						<div class="expense__tags">
+							<div class="expense__tag">food</div>
+							<div class="expense__tag">entertainment</div>
+							<div class="expense__tag">friends</div>
+							<div class="expense__tag">food</div>
+						</div>
+					</div> -->
+				</div>
+			</aside>
+
+			<div class="overlay visuallyhidden"></div>
+			<div class="modal modal--add-tag hidden visuallyhidden">
+				<button class="btn--close-modal">&times;</button>
+				<div class="heading--secondary--bold">Add Tag</div>
+			</div>
+
+			<div class="modal modal--add-expense hidden visuallyhidden">
+				<button class="btn--close-modal">&times;</button>
+				<div class="heading--secondary--bold">Add Expense</div>
+			</div>
+
+			<div class="message message--failure visuallyhidden"></div>
+		</div>
+	</body>
+</html>
