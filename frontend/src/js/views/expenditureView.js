@@ -3,9 +3,13 @@ import gpay from 'url:../../imgs/google-pay-icon.png'
 import hdfc from 'url:../../imgs/HDFC-Bank-logo.png'
 
 import View from './View'
+import Modal from '../miscellaneous/modal'
 
 class ExpenditureView extends View {
 	_parentElement = document.querySelector('.expenses-container')
+	_addBtn = document.querySelector('.btn-addExpense')
+	_addModal = document.querySelector('.modal--add-expense')
+	_closeModal = document.querySelector('.btn--close-modal-expense')
 
 	_generateMarkup() {
 		return this._data.hasData
@@ -323,6 +327,11 @@ class ExpenditureView extends View {
 			const deleteExpense = e.target.closest('.expense-box')
 			handler(deleteExpense)
 		})
+	}
+
+	addExpenseModalHandler() {
+		const addExpenseModal = new Modal(this._addModal, this._addBtn, this._closeModal)
+		addExpenseModal.addHandlers()
 	}
 }
 

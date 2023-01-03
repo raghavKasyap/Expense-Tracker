@@ -20,4 +20,5 @@ const deleteExpenditureController = async function (deleteExpense) {
 
 export const addHandlers = function () {
 	expenditureView.addDeleteHandler(deleteExpenditureController)
+	expenditureView.addExpenseModalHandler()
 }

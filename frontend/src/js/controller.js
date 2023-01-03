@@ -18,40 +18,9 @@ const init = function () {
 	//Adding all the hanlders here..
 	calendarController.addHandlers()
 	expenditureController.addHandlers()
+	tagsController.addHandlers()
+
 	console.log(state)
-
-	const modal = document.querySelector('.modal')
-	const overlay = document.querySelector('.overlay')
-	const btnCloseModal = document.querySelector('.btn--close-modal')
-	const btnsOpenModal = document.querySelectorAll('.btn-add-tag')
-
-	const openModal = async function () {
-		modal.classList.remove('visuallyhidden')
-		overlay.classList.remove('visuallyhidden')
-
-		await wait(0.2)
-
-		modal.classList.remove('hidden')
-	}
-
-	const closeModal = async function () {
-		modal.classList.add('hidden')
-
-		await wait(0.2)
-		modal.classList.add('visuallyhidden')
-		overlay.classList.add('visuallyhidden')
-	}
-
-	btnsOpenModal.forEach((btn) => btn.addEventListener('click', openModal))
-
-	btnCloseModal.addEventListener('click', closeModal)
-	overlay.addEventListener('click', closeModal)
-
-	document.addEventListener('keydown', function (e) {
-		if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-			closeModal()
-		}
-	})
 }
 
 init()

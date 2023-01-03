@@ -11,7 +11,8 @@
 	padding: 2rem 1.5rem;
 	transition: all 0.1s;
 
-	&--add-tag {
+	&--add-tag,
+	&--add-expense {
 		width: 30%;
 		height: 30%;
 		font-size: 2px;
@@ -19,13 +20,16 @@
 }
 
 .btn--close-modal {
-	position: absolute;
-	top: 1rem;
-	right: 1.5rem;
-	font-size: 3.5rem;
-	color: $color-white-1;
-	cursor: pointer;
-	border: none;
-	background: none;
-	transition: all 0.2s;
+	&-expense,
+	&-tag {
+		position: absolute;
+		top: 1rem;
+		right: 1.5rem;
+		font-size: 3.5rem;
+		color: $color-white-1;
+		cursor: pointer;
+		border: none;
+		background: none;
+		transition: all 0.2s;
+	}
 }
