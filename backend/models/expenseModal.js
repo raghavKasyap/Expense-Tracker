@@ -4,7 +4,6 @@ const expenseSchema = new mongoose.Schema(
 	{
 		user: {
 			type: mongoose.Schema.Types.ObjectId,
-			required: true,
 			ref: 'User',
 		},
 		title: {
@@ -23,12 +22,25 @@ const expenseSchema = new mongoose.Schema(
 			type: String,
 			required: true,
 		},
-		password: {
+		date: {
 			type: String,
 			required: true,
+		},
+		tags: {
+			type: [
+				{
+					type: mongoose.Schema.Types.ObjectId,
+					ref: 'Tag',
+				},
+			],
+			default: [],
 		},
 	},
 	{
 		timestamps: true,
 	}
 )
+
+const Expense = new mongoose.model('Expense', expenseSchema)
+
+export default Expense
